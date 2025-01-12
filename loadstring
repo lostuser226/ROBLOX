@@ -1,1 +1,1 @@
-loadstring(game.HttpGet("
+loadstring(game.HttpGet("raw.githubusercontent.com/lostuser226/ROBLOX/refs/heads/main/--%20This%20is%20a%20Lua%20file.lua"))()
