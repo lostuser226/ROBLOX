@@ -30,20 +30,13 @@ Time = <number> - The duration of the notification.
 ]]
 
 Tab:AddButton({
-    Name = "Kill All",
+    Name = "Kill All WIP[BROKEN ATM]",
     Callback = function()
         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
             if v:FindFirstChild("Humanoid") then
                 v.Humanoid.Health = 0
             end
         end
-    end    
-})
-
-Tab:AddButton({
-    Name = "walkspeed",
-    Callback = function()
-        player.Character.Humanoid.WalkSpeed = 50
     end    
 })
 
@@ -70,7 +63,7 @@ local selectedPlayerName = ""
 TabFun:AddTextbox({
     Name = "Player Name",
     Default = "",
-    TextDisappear = true,
+    TextDisappear = false,
     Callback = function(value)
         selectedPlayerName = value
     end
@@ -92,3 +85,30 @@ TabFun:AddButton({
     end    
 })
 
+TabFun:AddSlider({
+    Name = "WalkSpeed",
+    Min = 16,
+    Max = 100,
+    Default = 16,
+    Color = Color3.fromRGB(255,255,255),
+    Increment = 1,
+    ValueName = "WalkSpeed",
+    Callback = function(value)
+        player.Character.Humanoid.WalkSpeed = value
+    end    
+})
+
+
+Tab:AddButton({
+    Name = "InfWare",
+    Callback = function()
+        execute = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kitler69/InfiniteWare/refs/heads/main/Launcher",true))()
+    end
+})
+
+Tab:AddButton({
+    Name = "FischV2",
+    Callback = function()
+        execute = loadstring(game:HttpGet("https://raw.githubusercontent.com/Skzuppy/forge-hub/main/loader.lua"))()
+    end
+})
