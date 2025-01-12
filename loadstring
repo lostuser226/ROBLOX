@@ -1,1 +1,3 @@
 loadstring(game.HttpGet("raw.githubusercontent.com/lostuser226/ROBLOX/refs/heads/main/--%20This%20is%20a%20Lua%20file.lua"))()
+
+ loadstring(game:HttpGet(('raw.githubusercontent.com/lostuser226/ROBLOX/refs/heads/main/local%20player%20%3D%20game.player.lua')))()
